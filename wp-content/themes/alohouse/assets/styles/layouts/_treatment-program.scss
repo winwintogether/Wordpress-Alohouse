@@ -1,0 +1,423 @@
+#treatment-program {
+  margin-top:5em;
+  .row {
+    @media #{$small-only} {
+      padding-right: 2em;
+      padding-left: 2em;
+    }
+  }
+
+  .title {
+    margin-bottom: .5em;
+    color: $offblack;
+    text-align: center;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    @media #{$small-only} {
+      font-size: 1.8rem;
+    }
+  }
+
+  .page-header {
+    h1{
+      color: $main-color;
+      text-transform: uppercase;
+      border-bottom: none;
+    }
+    text-align: center;
+  }
+
+  .top-section {
+    padding-top: 2em;
+    padding-bottom: 5em;
+    @media #{$small-only} {
+      text-align: center;
+    }
+
+    .image-area {
+      img {
+        margin-top:2em;
+        width: 450px;
+        float: right;
+        shape-margin: 40px;
+        margin-left: 40px;
+        margin-bottom: 10px;
+        @media #{$small-only} {
+          shape-outside: none;
+          display: none;
+          margin-left: 0;
+        }
+      }
+    }
+    .mobile-image-area {
+      img {
+        width: 450px;
+        display: none;
+        @media #{$small-only} {
+          display: block;
+        }
+      }
+    }
+    .text-area {
+      .header-text {
+        font-size: 2rem;
+        text-transform: uppercase;
+        @media #{$small-only} {
+          font-size: 1.5rem;
+        }
+      }
+      .highlight-text {
+        color: $main-color;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .treatment-steps-section {
+    background-color: $offwhite;
+    padding-top: 5em;
+    padding-bottom: 5em;
+
+    .tab-view {
+      display: block;
+      @media #{$small-only} {
+        display: none;
+      }
+      .tabs {
+        background-color: $white;
+        border: 1px solid $main-color;
+      }
+      .tabs-title > a:focus, .tabs-title > a[aria-selected=true] {
+        background: $main-color;
+      }
+      .tabs-title {
+        a {
+          padding: 1.7em 20px;
+          text-align: center;
+          text-transform: unset;
+          font-size: .9rem;
+        }
+      }
+      .tabs-content {
+        background-color: $offwhite;
+        border-color: $offwhite;
+      }
+      .tabs-panel {
+        padding: 0;
+        padding-top: 4em;
+      }
+      .image-area {
+        width: 35%;
+        display: inline-block;
+        float: left;
+        img {
+          width: 100%;
+        }
+      }
+      .text-area {
+        width: 60%;
+        display: inline-block;
+        float: right
+      }
+    }
+
+    .accordion-view {
+
+      display: none;
+      @media #{$small-only} {
+        display: block;
+      }
+
+      li {
+        text-align: center;
+        border: 1px solid $main-color;
+        margin-top: 1em;
+        .accordion-title {
+          background-color: $white;
+          color: $offblack;
+          border: none;
+          &:before {
+            display: none;
+          }
+        }
+      }
+      li.is-active {
+        .accordion-title {
+          background-color: $main-color;
+          color: $white;
+          border: none;
+        }
+      }
+      .image-area {
+        width: 100%;
+        display: block;
+        img {
+          width: 100%;
+        }
+      }
+      .text-area {
+        width: 100%;
+        margin-top: 2em;
+        display: block;
+      }
+    }
+    h3{
+      color:$main-color;
+      text-transform: uppercase;
+    }
+  }
+
+  .individual-goal-section {
+    text-align: center;
+    padding-top: 5em;
+    padding-bottom: 5em;
+    background: url(../images/text-back.png) no-repeat bottom;
+    background-size: cover;
+    h3 {
+      color: $main-color;
+      font-size: 2rem;
+      padding-top: 2em;
+      text-transform: uppercase;
+    }
+
+    .highlight-text {
+      font-weight: 700;
+      text-decoration: underline;
+    }
+  }
+
+  .full-box-section {
+      .text-area {
+      padding-right: 4em !important;
+      padding-left: 4em !important;
+      @include grid-column(6);
+      @include breakpoint(large down)  {
+        @include grid-column(12);
+        padding-right: 1em !important;
+        padding-left: 1em !important;
+        height: 600px;
+        text-align: center;
+      }
+      background-color: $main-color;
+      color: $white;
+      height: 550px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      h2 {
+        color: $white;
+        border-bottom: none;
+      }
+    }
+    .image-area, .mobile-image-area {
+      padding-right: 0 !important;
+      padding-left: 0 !important;
+      @include grid-column(6);
+      @include breakpoint(large down){
+        @include grid-column(12);
+        height: 600px;
+      }
+      height: 550px;
+      background-size: cover !important;
+    }
+    .box-row:nth-child(2) > .image-area {
+      @include breakpoint(large down)  {
+          display: none;
+      }
+    }
+    .box-row:nth-child(2) > .mobile-image-area {
+      display: none;
+      @include breakpoint(large down)  {
+        display: block;
+      }
+    }
+  }
+
+  .comprehensive-drug-section {
+    clear: both;
+    padding-top: 5em;
+    padding-bottom: 5em;
+    @media #{$small-only} {
+      text-align: center;
+    }
+    .image-area {
+      img {
+        margin-top:5em;
+        width: 450px;
+        float: right;
+        shape-outside: url(../images/treatment-combine-2.png);
+        shape-margin: 40px;
+        margin-left: 40px;
+        margin-bottom: 10px;
+        @media #{$small-only} {
+          shape-outside: none;
+          display: none;
+          margin-left: 0;
+        }
+      }
+    }
+    .mobile-image-area {
+      img {
+        width: 450px;
+        display: none;
+        @media #{$small-only} {
+          display: block;
+        }
+      }
+    }
+    .text-area {
+      .header-text {
+        font-size: 2rem;
+        text-transform: uppercase;
+        @media #{$small-only} {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+
+  .individual-care-section {
+    background-color: $offwhite;
+    padding-top: 5em;
+    padding-bottom: 5em;
+
+    .tab-view {
+      display: block;
+      @media #{$small-only} {
+        display: none;
+      }
+      .tabs {
+        background-color: $white;
+        border-bottom: 3px solid $main-color;
+        .tabs-title > a:focus, .tabs-title > a[aria-selected=true] {
+          background: $main-color;
+        }
+        .tabs-title {
+          width:25%;
+          a {
+            padding: 1.7em 0;
+            text-align: center;
+            text-transform: unset;
+            font-size: .9rem;
+            .icon {
+              margin: 0 auto;
+              img{ width: $icon-large;
+                height: $icon-large;
+              }
+            }
+          }
+          a[aria-selected=true] {
+            .icon {
+              img {
+                filter: brightness(0) invert(1);
+              }
+            }
+          }
+        }
+      }
+
+      .tabs-content {
+        background-color: $offwhite;
+        border-color: $offwhite;
+      }
+      .tabs-panel {
+        padding: 0;
+        padding-top: 4em;
+      }
+      .image-area {
+        width: 35%;
+        display: inline-block;
+        float: left;
+        img {
+          width: 100%;
+        }
+      }
+      .text-area {
+        width: 60%;
+        display: inline-block;
+        float: right
+      }
+    }
+
+    .accordion-view {
+
+      display: none;
+      @media #{$small-only} {
+        display: block;
+      }
+      li {
+        text-align: center;
+        border-bottom: 2px solid $main-color;
+        margin-top: 1em;
+
+        .accordion-title {
+          background-color: $white;
+          color: $offblack;
+          border: none;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-transform: initial ;
+          &:before {
+            display: none;
+          }
+          .icon {
+            margin-right:1em;
+            img{
+              width:$icon-small;
+            }
+          }
+        }
+      }
+      li.is-active {
+        border: 1px solid $main-color;
+        .accordion-title {
+          background-color: $main-color;
+          color: $white;
+          border: none;
+          .icon{
+            img{
+              filter: brightness(0) invert(1);
+            }
+          }
+        }
+      }
+
+      .image-area {
+        width: 100%;
+        display: block;
+        img {
+          width: 100%;
+        }
+      }
+      .text-area {
+        width: 100%;
+        margin-top: 2em;
+        display: block;
+      }
+    }
+
+    h3{
+      color:$main-color;
+      text-transform: uppercase;
+    }
+  }
+
+  .alumni-program-section {
+    padding:3em 0;
+    text-align: center;
+    .row{
+      padding-right:8em;
+      padding-left:8em;
+      @media #{$small-only} {
+        padding-right:2em;
+        padding-left:2em;
+      }
+    }
+    .hightlight-text {
+      color: $main-color;
+      text-decoration: underline;
+    }
+
+  }
+}

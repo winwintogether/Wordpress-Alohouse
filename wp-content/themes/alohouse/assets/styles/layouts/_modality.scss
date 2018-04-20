@@ -1,0 +1,46 @@
+.modalities-archive {
+  .page-header {
+    text-align:center;
+    h1{
+      border-bottom: none;
+    }
+  }
+  .entry-list{
+    margin-top:7em;
+  }
+}
+
+.modality-loop {
+  @include grid-column(4);
+  @media #{$medium-only} {
+    @include grid-column(6);
+  }
+  @media #{$small-only} {
+    @include grid-column(12);
+    padding:1.5em 2.2em 1.5em 2.2em;
+  }
+}
+
+.modality{
+  .entry{
+    background-color:$offwhite;
+    .entry-header{
+     img{
+       width: 100%;
+       height:200px;
+     }
+    }
+    .entry-content{
+      h2{
+        font-size: 1.2em;
+        display: block;
+      }
+      min-height: 300px;
+      padding:2em;
+    }
+    .entry-footer{
+      padding: 0 2em 4em 2em;
+    }
+  }
+}
+

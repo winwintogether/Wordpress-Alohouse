@@ -1,0 +1,21 @@
+.activity-item {
+    @include grid-row();
+    padding-top:20px;
+    .activity-content {
+        h2.activity-name {
+            color: #a7c3c5;
+            @extend h4;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+        p {
+            margin:20px 0 0 0;
+        }
+        @include grid-column(9);
+        @include unset-mobile-only;
+    }
+    .activity-image {
+        @include grid-column(3);
+        @include unset-mobile-only;
+    }
+}

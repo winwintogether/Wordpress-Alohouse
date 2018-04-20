@@ -1,0 +1,165 @@
+.before-footer {
+    @include bg-color(#f9f6f6, 5%, 5%);
+    .content {
+    @include grid-row();
+    }
+    text-align: center;
+}
+
+.copyright-area {
+    background:#767a78;
+    text-align:center;
+    @include grid-row($width: none);
+    color:#fff;
+    padding-top:10px;
+    padding-bottom:10px;
+    p {
+        font-size:14px;
+        padding:0;
+        margin:0;
+    }
+}
+
+.footer {
+    font-weight:500;
+    @include bg-color(#f9f6f6, 6%, 6%);
+    .site-info {
+        @include grid-row();
+    }
+    
+     .left {
+         @include grid-column(7);
+         @include unset-mobile-medium;
+        h2 {
+        font-size:24px;
+        }   
+        input[type="submit"]{
+            width:100%;
+        }
+        h3 {
+            text-transform:uppercase;
+            font-weight:500;
+        }
+    }
+
+     .right {
+        @include grid-column(5);
+        @include unset-mobile-medium;
+        .contact-box {
+            @media #{$large-only} {
+            padding-left:40px;
+            padding-right:40px;
+            }
+            .phone {
+            @include grid-column(12);
+            text-align: center;
+            border-bottom: 3px solid $teal-3;
+            @include grid-row();
+            padding-bottom: 10px;
+            font-weight: 500;
+            text-align: center;
+            a {
+                font-size:24px;
+                letter-spacing: 1px;
+            }
+            }
+            .site-nav {
+            padding: 25px;
+            @include grid-column(6);
+             ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                font-size: 15px;
+                text-align: right;
+                line-height: 39px;
+                font-weight: 500;
+                font-spacing:1px;
+                a {
+             
+                }
+            }
+
+            }
+            .social-links {
+            padding: 5px;
+            @include grid-column(6);
+            border-left: 3px solid $teal-3;
+            height:180px;
+            ul {
+                list-style-type: none;
+                li {
+                    display: inline-block;
+                    margin:8px;
+                    i {
+                        font-size:23px;
+                    }
+                    a {
+                        color: #5f9a9e;
+                    }
+                }
+            }
+
+            }
+            .seals {
+            padding-top:15px;
+            border-top: 3px solid $teal-3;
+            border-bottom: 3px solid $teal-3;
+            text-transform: uppercase;
+            text-align:center;
+            letter-spacing: 1px;
+            @include grid-column(12);
+          }
+          .newsletter-signup {
+            clear:both;
+            
+            p {
+                text-align:center;
+                margin-top:15px;
+            }
+          }
+        }
+    }
+    
+}
+
+a.bbb-link {
+   margin-bottom:15px;
+   margin-top:15px;
+   display:block;
+}
+
+.newsletter-sign-up {
+    border-top:3px solid #eee;
+    position: fixed;
+    display:none;
+    bottom:0;
+    right:0;
+    background:url(../images/beach_hero.png) no-repeat center;
+    background-size:cover;
+    width:100%;
+    height:10%;
+    &.show {
+        display:block;
+    }
+    &.hide {
+        display:none;
+    }
+    .inner {
+        @include grid-row();
+        padding-top:20px;
+        h2 {
+            text-transform: none;
+            border-bottom:0;
+        }
+        .left {
+        @include grid-column(6);
+        }
+        .right {
+        @include grid-column(6);
+        .button {
+            font-size:.8rem;
+        }
+        }
+    }
+}

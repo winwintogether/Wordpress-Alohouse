@@ -1,0 +1,116 @@
+.testimonials-archive {
+  margin-top:4em;
+  header.page-header {
+    text-align: center;
+  }
+  h1 {
+    border-bottom: none;
+  }
+
+  color:$offblack;
+}
+
+.testimonials-nav {
+  p {
+    text-align: center;
+  }
+}
+
+.testimonials-loop {
+  @include grid-column(6);
+  padding-bottom: 4%;
+  @media #{$small-only} {
+    @include grid-column(12);
+    padding:1.5em;
+  }
+}
+
+.testimonials-menu {
+  @extend .menu-centered;
+  margin-bottom: 4%;
+  margin-top: 2%;
+  text-align: center;
+  float: left;
+  width: 100%;
+}
+
+.testimonials-loop:last-child:not(:first-child) {
+  float: left;
+}
+
+.testimonials_page_menu {
+  ul {
+    text-transform: uppercase;
+    font-weight: 500;
+    li.active a {
+      color: $white;
+      background-color: $main-color;
+    }
+    @include menu-base;
+    @include menu-simple;
+    @media #{$small-only} {
+    @include menu-direction(vertical);
+      margin:1.5em;
+      border: 1px solid $main-color;
+    }
+
+    li {
+      margin: 0;
+      margin-left:-5px;
+      @media #{$small-only} {
+        margin-left:0;
+      }
+      border-bottom: 1px solid $main-color;
+      border-top: 1px solid $main-color;
+      &:first-child {
+          border-left: 1px solid $main-color;
+          @media #{$small-only} {
+          border: none;
+        }
+      }
+      &:last-child {
+         border-right: 1px solid $main-color;
+        @media #{$small-only} {
+          border: none;
+        }
+      }
+      @media #{$small-only} {
+        border: none;
+      }
+      a {
+        margin-bottom: -1px;
+        margin-top:-1px;
+        font-size: 0.9em;
+        padding:1em 3em;
+        &:hover {
+          color: $white;
+          background-color: $main-color;
+        }
+      }
+    }
+  }
+}
+.testimonial{
+  .reviewBody{
+    background:url(../images/outline.png) no-repeat center;
+    background-size: 100% 100%;
+    min-height: 200px;
+    padding:2em 2em 4em;
+    &:hover{
+      background:url(../images/active-outline.png) no-repeat center;
+      background-size: 100% 100%;
+      min-height: 200px;
+      padding:2em 2em 4em;
+    }
+  }
+  .quot{
+    color:$main-color;
+  }
+
+  .author{
+    padding-top:2em;
+    font-size:0.9em;
+    font-weight: 500;
+  }
+
+}

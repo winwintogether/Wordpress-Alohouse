@@ -1,0 +1,43 @@
+## Environemnt Variables
+## WP_CONTENT_DIR = full path to wp-content directory (no trailing slash)
+## THEME_FOLDER =  
+## SSH_USER = 
+
+image: riviera4media/alpine-node-lftp
+
+cache:
+  paths:
+   - node_modules/
+
+stages:
+  - build_theme
+  - production
+
+build_theme:
+  before_script:
+    - npm install -g gulp
+    - npm install -g bower
+    - npm install
+  stage: build_theme
+  only:
+   - develop
+  script:
+   - bower install --allow-root
+   - gulp -production --allow-root
+
+deploy_production:
+  before_script:
+    - npm install -g gulp
+    - npm install -g bower
+    - npm install
+    - bower install --allow-root
+    - gulp --production --allow-root
+    - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
+    - mkdir -p ~/.ssh
+    - eval $(ssh-agent -s)
+    - '[[ -f /.dockerenv ]] && echo -e "Host *\n  StrictHostKeyChecking no\n" > ~/.ssh/config'
+  stage: production
+  script:
+  - lftp -c "open -u alorecovery-robertstaging,Ew3a7PCDw9LZ sftp://alorecovery.com:2222; mirror -c -e -R -L --exclude bower_components/ --exclude assets/ --exclude '^\.' --exclude node_modules/ --exclude CHANGELOG.md --exclude composer.json --exclude bower.json --exclude package.json --exclude package-lock.json --exclude-glob .git* --exclude .git/ --exclude sftp-config.json --exclude gulpfile.js . /wp-content/themes/alohouse/"
+  only:
+   - master

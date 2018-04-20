@@ -1,0 +1,35 @@
+.gform_wrapper .hidden_label .gfield_label, .gform_wrapper label.hidden_sub_label, .gform_wrapper label.screen-reader-text {
+	clip: rect(1px,1px,1px,1px);
+    position: absolute!important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+
+ul.gform_fields {
+  margin:0;
+  padding:0;
+  list-style-type: none;
+}
+
+.gform_validation_container {
+	display:none;
+}
+
+h2.gsection_title {
+	@extend h3;
+	text-transform: none;
+	border-bottom:none;
+	margin-bottom:0;
+}
+
+div.gsection_description {
+	padding-top:0;
+	padding-bottom:15px;
+}
+
+.gfield_checkbox {
+	list-style-type: none;
+	padding-left:0;
+	margin-left:0;
+}

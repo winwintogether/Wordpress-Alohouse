@@ -1,0 +1,281 @@
+header.banner {
+	background:$cream;
+	padding-top:1.4%;
+	padding-bottom:.8%;
+	.logo {
+		margin-top:9px;
+		a {
+			img[src*=".svg"] {
+			  width: 100%; 
+			}
+		}
+	}
+	.phone {
+		color:$teal-3;
+		h4 {
+			margin-top:10px;
+			color: $teal-3;
+			text-align:right;
+			letter-spacing: 3px;
+			span {
+				display:block;
+				font-size:14px;
+				letter-spacing:.12em;
+			}
+		}
+	}
+}
+
+.is-drilldown{min-height:1500px!important;}
+
+[data-dropdown-menu] ul {
+  display: none;
+}
+
+.top-bar-left .dropdown{
+	background: transparent;
+	top:55px;
+}
+
+.dropdown.menu>li.opens-right>.is-dropdown-submenu {
+	top:43px;
+	left:0;
+	z-index:9999;
+}
+
+
+.top-bar {
+	text-transform: uppercase;
+	z-index:9999;
+	 text-transform: uppercase;
+        font-size: 16px;
+        font-weight: 500;
+        color: $white;
+        a {
+        	color: $white;
+        }
+}
+
+a.close-canvas {
+	display:none;
+}
+
+.title-bar {
+	width: 100%;
+	padding-left:15px;
+	padding-right:15px;
+}
+
+.title-bar-title {
+	height:56px;
+	width:46px;
+	position:absolute;
+	left:67%;
+}
+
+.title-bar-left {
+	left:0;
+	top:15px;
+	z-index:9999;
+	float: left;
+	width:275px;
+	p {
+		display:none;
+	}
+	@media #{$small-only} {
+	width:75%;
+	max-width:275px;
+	}
+	@media #{$small-only} {
+	p {
+		display:block;
+		padding:0;
+		margin-bottom:0;
+		margin-top:4px;
+		margin-left:54px;
+		a {
+			margin-top:20px;
+			color:#5f9a9f;
+			font-weight:500;
+			font-size:14px;
+		}
+	}
+	}
+	img {
+
+	}
+}
+
+.title-bar-right {
+	
+	height:56px;
+	width:46px;
+}
+
+
+.off-canvas ul.main-mobile-menu {
+  // background: #9F9F9F;
+  background: $dark-blue;
+  li {
+  	padding-top:10px;
+  	padding-bottom:10px;
+  	border-bottom: 1px solid #ddd;
+  }
+  a {
+  	color: #fff;
+  	text-transform: uppercase;
+  	font-weight: $bold;
+  	font-size:16px;
+  	
+  }
+  .js-drilldown-back {
+  	font-size: 14px;
+  	background: $dark-blue;
+  	padding-bottom:2px;
+  	padding-top:2px;
+  }
+}
+
+.off-canvas .button-group {
+	margin-bottom:0;
+	text-transform:uppercase;
+	font-weight: $bold;
+	.button {
+		background: #929593;
+		padding-top:1rem;
+		padding-bottom:1rem;
+		font-size:.7rem;
+		border-radius:0;
+		margin:0;
+		width:50%;
+	}
+}
+
+.nav-primary {
+	text-align:center;
+	margin-top:16px;
+
+	a {
+		color: $teal-3;
+		font-weight: 400;
+  		text-transform: uppercase;
+  		letter-spacing:.05em;
+  		font-size: 14px;
+  		border:1px solid #5f9a9f;
+  		border-radius: $global-radius;
+
+	}
+	ul{
+		margin-left:85px;
+	}
+}
+
+.title-overlay {
+	position:relative;
+	display:block;
+	top:20%;
+	@media #{$large-only} {
+	top:0;
+	width:70%;
+	margin:0 auto;
+	}
+	h1 {
+		font-weight: 500;
+		color: #fff;
+		border-bottom:none;
+		font-size:3.2rem;
+		line-height:4rem;
+		text-transform:uppercase;
+		@media #{$medium-only} {
+		font-size:2.4rem;
+		line-height:2.9rem;
+		}
+		@media #{$small-only} {
+		font-size:1.3rem;
+		line-height:2rem;
+		margin-bottom: 0;
+		}
+	}
+	p.lead {
+		color: #fff;
+		@media #{$medium-only} {
+		font-size:100%
+		}
+		@media #{$small-only} {
+		font-size:100%;
+		margin-bottom: .4rem;
+		}
+
+	}
+}
+
+.home-absolute-center {
+  text-align:center;
+  z-index:9994;
+  width: 70%;
+  height: 70%;
+  overflow: auto;
+  margin: auto;
+  position: absolute;
+  @media #{$large-only} {
+  top: 20%; 
+  width: 90%;
+  height: 80%;
+  }
+  @media #{$xlarge-only} {
+  top: 0; 
+  width: 90%;
+  height: 80%;
+  }
+  top: 20%; 
+  left: 0; 
+  bottom: 0; 
+  right: 0;
+  @media #{$medium-only} {
+	top:0;
+	width:60%;
+	height:100%;
+  }
+  @media #{$small-only} {
+	top:0;
+	width: 90%;
+	height:100%;
+  }
+
+}
+
+.slider-container {
+	position:relative;
+}
+
+.home-slider {
+	height:80vh;
+	background:url(../images/home_waves.jpeg) no-repeat center;
+	background-size:cover;
+	.slide {
+  	width: 100%;
+	text-align:center;
+	height:80vh;
+	img {
+		display:none;
+	}
+	@media #{$medium-only} {
+       height:450px;
+    }
+     @media #{$small-only} {
+       height:350px;
+    }
+  	}
+	margin: 0;
+  	padding: 0;
+  	width: 100%;
+	@media #{$medium-only} {
+       height:450px;
+    }
+    @media #{$small-only} {
+       height:100%;
+    }
+}
+
+
+

@@ -1,0 +1,1 @@
+## 1. install ACF plugin and create image 

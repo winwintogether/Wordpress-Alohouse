@@ -1,0 +1,62 @@
+{
+    "key": "group_5aa62c85a2022",
+    "title": "treatment-program-alumni-program-section",
+    "fields": [
+        {
+            "key": "field_5aa62c9a2db83",
+            "label": "alumni-program-section-title",
+            "name": "alumni-program-section-title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5aa62ca42db84",
+            "label": "alumni-program-section-text-content",
+            "name": "alumni-program-section-text-content",
+            "type": "textarea",
+            "instructions": "if highlight content, use with class hightlight-text",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-treatment-program.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1520839961
+}

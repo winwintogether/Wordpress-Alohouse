@@ -1,0 +1,32 @@
+{
+  "name": "sage",
+  "homepage": "https://roots.io/sage/",
+  "authors": [
+    "Ben Word <ben@benword.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "foundation-sites": "6.2.4",
+    "slick-carousel": "^1.6.0",
+    "js-cookie": "^2.2.0"
+  },
+  "overrides": {
+    "foundation-sites": {
+      "dependencies": {}
+    },
+    "foundation-icon-fonts": {
+      "main": [
+        "_foundation-icons.scss"
+      ]
+    },
+    "slick-carousel": {
+      "main": [
+        "slick/slick.js",
+        "slick/slick.scss",
+        "slick/slick-theme.scss"
+      ],
+      "dependencies": {}
+    }
+  }
+}

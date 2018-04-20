@@ -1,0 +1,67 @@
+{
+    "key": "group_5aa3e4f68de23",
+    "title": "intensive-outpatient-program-top-section",
+    "fields": [
+        {
+            "key": "field_5aa3e61a71386",
+            "label": "top-section-title",
+            "name": "top-section-title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5aa3e76771387",
+            "label": "top-section-description",
+            "name": "top-section-description",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page",
+                "operator": "==",
+                "value": "692"
+            },
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-intensive-outpatient-program-new.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1520701618
+}

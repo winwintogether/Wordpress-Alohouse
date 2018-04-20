@@ -1,0 +1,87 @@
+.page-section.staff {
+    padding-top: 45px;
+    img {
+         @include grid-column(2);
+    }   
+    .title-section {
+         @include grid-column(10);
+    }
+
+    .staff-content {
+        clear:both;
+    }
+}
+
+.single-staff #staff-archive .content {
+    padding-top: 0;
+}
+
+
+#staff-archive {
+    @include grid-row();
+    .content {
+        padding-top: 3%;
+    }
+    h1.page-title {
+        small {
+            text-transform:none;
+            @media #{$small-only} {
+                display:inline-block;
+            }
+        }
+    }
+}
+
+
+.staff-item {
+    @include grid-row();
+    padding-top:20px;
+    padding-bottom: 20px;
+    .staff-bio {
+        h2.staff-name {
+            font-size: 18px;
+            text-transform: uppercase;
+            padding:0;
+            margin:0;
+            font-weight: 500;
+            letter-spacing: 1px;
+            border-bottom:0;
+        }
+        h2.staff-title {
+            font-size: 16px;
+            padding:10px 0 0 0;
+            margin:0;
+            font-weight: normal;
+            letter-spacing: 1px;
+            border-bottom:0;
+        }
+        p {
+            margin:20px 0 0 0;
+        }
+        @include grid-column(9);
+        @include unset-mobile-only;
+        @media #{$small-only} {
+        text-align: center
+        }
+    }
+    .staff-image {
+        text-align:center;
+        @media #{$small-only} {
+        text-align: center
+        }
+        @include grid-column(3);
+        @include unset-mobile-only;
+         img {
+            width:200px;
+            height:200px;
+            transition: all 200ms ease-in-out;
+            &:hover {
+            }
+        }
+    }
+}
+
+.staff-item.single {
+    padding-top: 70px;
+    padding-bottom:60px;
+}

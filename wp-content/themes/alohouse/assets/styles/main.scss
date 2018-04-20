@@ -1,0 +1,32 @@
+@import "common/variables";
+
+// Automatically injected Bower dependencies via wiredep (never manually edit this block)
+// bower:scss
+@import "../../bower_components/foundation-sites/scss/foundation.scss";
+@import "../../bower_components/slick-carousel/slick/slick.scss";
+@import "../../bower_components/slick-carousel/slick/slick-theme.scss";
+// endbower
+
+@include foundation-everything;
+
+@import "components/font-icons";
+@import "common/global";
+@import "common/typography";
+@import "components/buttons";
+@import "components/comments";
+@import "components/forms";
+@import "components/share-buttons";
+@import "components/grid";
+@import "components/wp-classes";
+@import "layouts/header";
+@import "layouts/sidebar";
+@import "layouts/footer";
+@import "layouts/pages";
+@import "layouts/posts";
+@import "layouts/tinymce";
+@import "layouts/staff";
+@import "layouts/activities";
+@import "layouts/testimonials";
+@import "layouts/modality";
+@import "layouts/treatment-program";
+@import "layouts/outpatient-program";

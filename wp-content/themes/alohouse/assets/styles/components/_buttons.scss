@@ -1,0 +1,29 @@
+.button {
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing:1px;
+}
+
+.button.gold {
+    background: #e4be6b;
+}
+
+.button.white {
+	background: #fff;
+	color:#d8a732;
+}
+
+.button.gry {
+	background:#929593;
+}
+.text-button{
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing:1px;
+	color: $main-color;
+	font-size:0.8em;
+}
+.border-button{
+	border:1px solid $main-color;
+	padding:.8em;
+}
